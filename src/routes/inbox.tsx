@@ -52,15 +52,19 @@ function Inbox() {
         {/* Headline */}
         <header className="space-y-3">
           <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-muted">
-            Inbox · {pendingCount} signal{pendingCount === 1 ? "" : "s"} pending · last scan today 06:45 UTC
+            Inbox · {pendingCount} signal{pendingCount === 1 ? "" : "s"} pending
           </p>
           <h1 className="font-serif text-5xl leading-[1.05] tracking-tight text-ink-strong">
             Today's signals.{" "}
             <em className="italic text-ink-muted">Validated.</em>
           </h1>
           <p className="max-w-2xl text-[15px] leading-[1.6] text-ink-muted">
-            AI scans the markets your assets live in, drops the noise, and routes only the signals that
-            move underwriting math. You confirm — the simulation runs.
+            Signals are synthesized from agency feeds and news sources, filtered against each asset's
+            underwriting model, and surfaced here for review. You confirm — the simulation runs.
+          </p>
+          <p className="max-w-2xl text-[13px] leading-[1.6] text-ink-muted">
+            Agency feeds rarely cover every asset in a portfolio — Sentinel synthesizes across sources
+            to close those gaps.
           </p>
           <div className="pt-2">
             <MiniAgentRow />
@@ -71,8 +75,9 @@ function Inbox() {
           <div className="border border-dashed border-rule py-20 text-center">
             <p className="font-serif text-2xl text-ink-strong">Inbox clear.</p>
             <p className="mt-2 text-[13px] text-ink-muted">
-              Check back after the next agent scan or view{" "}
-              <Link to="/sim-history" className="underline">simulation history</Link>.
+              View{" "}
+              <Link to="/sim-history" className="underline">simulation history</Link>{" "}
+              or revisit confirmed signals.
             </p>
           </div>
         )}

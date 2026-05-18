@@ -9,7 +9,7 @@ export const AGENT_ACTIVITY: AgentActivity[] = [
     timestamp: "2026-05-18T06:45:18Z",
     agent: "scout",
     action: "Scanned zip 92618 (Irvine)",
-    detail: "247 sources crawled · 31 candidates parsed · 8 above relevance threshold",
+    detail: "247 sources reviewed · 31 candidates parsed · 8 above relevance threshold",
     outcome: "deferred",
     sourcesScanned: 247,
     zipCode: "92618",

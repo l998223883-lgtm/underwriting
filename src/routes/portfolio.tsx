@@ -55,12 +55,16 @@ function Portfolio() {
         {/* Headline */}
         <header className="space-y-3">
           <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-muted">
-            Portfolio · {assets.length} assets · last scan today 06:45 UTC
+            Portfolio · {assets.length} assets · {pendingCount} pending signal{pendingCount === 1 ? "" : "s"}
           </p>
           <h1 className="font-serif text-5xl leading-[1.05] tracking-tight text-ink-strong">
             Read the market.{" "}
             <em className="italic text-ink-muted">Before the report does.</em>
           </h1>
+          <p className="max-w-2xl text-[13px] leading-[1.6] text-ink-muted">
+            Synthesizes CoStar, Bloomberg, MSCI, Trepp, and news sources. Designed to augment the
+            analyst workflow, not replace it.
+          </p>
         </header>
 
         {/* KPI strip */}
@@ -198,14 +202,14 @@ function Portfolio() {
               <span className="relative inline-flex h-2 w-2 rounded-full bg-risk-low" />
             </span>
             <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-strong">
-              Sentinel agent · active
+              Sentinel agent
             </span>
             <span className="font-mono text-[10px] tracking-[0.14em] text-ink-muted">
-              Monitoring {assets.map((a) => a.city).filter((v, i, arr) => arr.indexOf(v) === i).join(" · ")}
+              Coverage: {assets.map((a) => a.city).filter((v, i, arr) => arr.indexOf(v) === i).join(" · ")}
             </span>
           </div>
           <span className="font-mono text-[10px] tracking-[0.14em] text-ink-muted">
-            Next scan tomorrow 06:00 UTC
+            Scheduled cadence · every 24h plus event-driven
           </span>
         </div>
       </div>

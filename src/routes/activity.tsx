@@ -58,6 +58,9 @@ function Activity() {
             Every operation an agent ran on your behalf — including the {counts.dismissed} candidates
             it filtered out as noise so your inbox stayed signal.
           </p>
+          <p className="max-w-2xl text-[13px] leading-[1.6] text-ink-muted">
+            Pipeline outputs span agency feeds (CoStar, Bloomberg, MSCI, Trepp) and news wires.
+          </p>
         </header>
 
         {/* Stats strip */}
@@ -116,7 +119,7 @@ function Activity() {
         {entries.length === 0 && (
           <div className="border border-dashed border-rule py-20 text-center">
             <p className="font-serif text-2xl text-ink-strong">No matching activity.</p>
-            <p className="mt-2 text-[13px] text-ink-muted">Clear the filters or check back after the next scan.</p>
+            <p className="mt-2 text-[13px] text-ink-muted">Clear the filters to see all recorded activity.</p>
           </div>
         )}
       </div>
