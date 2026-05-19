@@ -163,6 +163,51 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
+/* Fallback for Safari < 15.4 which doesn't support oklch() */
+@supports not (color: oklch(0 0 0)) {
+  :root {
+    --paper: #f5f3ee;
+    --paper-2: #e8e4dd;
+    --ink: #3d3a36;
+    --ink-strong: #1e1c1a;
+    --ink-muted: #736d67;
+    --rule: #d8d2c8;
+    --risk-low: #3d7a4a;
+    --risk-low-bg: #dff0e4;
+    --risk-med: #8a6020;
+    --risk-med-bg: #f0e8d8;
+    --risk-high: #8a3020;
+    --risk-high-bg: #f0ddd8;
+    --background: #f5f3ee;
+    --foreground: #3d3a36;
+    --card: #faf9f7;
+    --card-foreground: #3d3a36;
+    --popover: #faf9f7;
+    --popover-foreground: #3d3a36;
+    --primary: #1e1c1a;
+    --primary-foreground: #f5f3ee;
+    --secondary: #e8e4dd;
+    --secondary-foreground: #3d3a36;
+    --muted: #e8e4dd;
+    --muted-foreground: #736d67;
+    --accent: #e8e4dd;
+    --accent-foreground: #3d3a36;
+    --destructive: #8a3020;
+    --destructive-foreground: #f5f3ee;
+    --border: #d8d2c8;
+    --input: #d8d2c8;
+    --ring: #736d67;
+    --sidebar: #f5f3ee;
+    --sidebar-foreground: #3d3a36;
+    --sidebar-primary: #1e1c1a;
+    --sidebar-primary-foreground: #f5f3ee;
+    --sidebar-accent: #e8e4dd;
+    --sidebar-accent-foreground: #3d3a36;
+    --sidebar-border: #d8d2c8;
+    --sidebar-ring: #736d67;
+  }
+}
+
 @layer base {
   * {
     border-color: var(--color-border);
